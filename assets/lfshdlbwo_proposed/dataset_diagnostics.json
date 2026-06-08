@@ -1,0 +1,115 @@
+{
+  "feature_mode": "gefcom_load",
+  "dataset_metadata": {
+    "dataset_name": "GEFCom2014-E load",
+    "dataset_path": "dataset/GEFCom2014 Data/GEFCom2014-E_V2/GEFCom2014-E.xlsx",
+    "rows_before_missing_load_drop": 96432,
+    "missing_load_rows": 17544,
+    "known_load_rows": 78888,
+    "selected_rows": 8760,
+    "start_timestamp": "2014-01-01 00:00:00",
+    "end_timestamp": "2014-12-31 23:00:00",
+    "raw_series_count": 2,
+    "target_series_count": 1,
+    "exogenous_series_count": 1,
+    "target_series_names": [
+      "load"
+    ],
+    "exogenous_series_names": [
+      "temperature"
+    ],
+    "recent_years": 1,
+    "start_date": null,
+    "end_date": null
+  },
+  "feature_count": 61,
+  "row_count": 8760,
+  "sample_count": 8712,
+  "train_sample_count": 6969,
+  "holdout_sample_count": 1743,
+  "window_size": 48,
+  "forecast_horizon": 1,
+  "train_mean_baseline": {
+    "mse": 251289.70169294518,
+    "rmse": 501.288042639105,
+    "mae": 424.6577089984686,
+    "mape": 13.60621389741605
+  },
+  "previous_hour_baseline": {
+    "mse": 28125.91967871486,
+    "rmse": 167.70784024223454,
+    "mae": 126.67355134825014,
+    "mape": 3.9022413187341067
+  },
+  "previous_day_baseline": {
+    "mse": 43486.528973035,
+    "rmse": 208.53423933022364,
+    "mae": 149.5754446356856,
+    "mape": 4.551820823597753
+  },
+  "autocorrelation": {
+    "1": 0.9557219232745773,
+    "2": 0.8392951176547402,
+    "3": 0.6793177955550393,
+    "6": 0.16216652810198323,
+    "12": -0.15044905992003613,
+    "24": 0.9159773921091485,
+    "48": 0.8240000044936533,
+    "168": 0.9015551076220222
+  },
+  "top_lead_feature_correlations": [
+    {
+      "feature": "load",
+      "correlation": 0.9557219232745775
+    },
+    {
+      "feature": "load_lag_24",
+      "correlation": 0.86921482820129
+    },
+    {
+      "feature": "load_roll_mean_3",
+      "correlation": 0.8486131934298904
+    },
+    {
+      "feature": "load_lag_168",
+      "correlation": 0.8437375139810717
+    },
+    {
+      "feature": "load_roll_min_3",
+      "correlation": 0.8412270676864645
+    },
+    {
+      "feature": "load_lag_1",
+      "correlation": 0.8392930734095111
+    },
+    {
+      "feature": "load_roll_max_3",
+      "correlation": 0.8316094393427055
+    },
+    {
+      "feature": "load_lag_48",
+      "correlation": 0.7766128677195412
+    },
+    {
+      "feature": "load_lag_2",
+      "correlation": 0.6793118660809561
+    },
+    {
+      "feature": "hour_cos",
+      "correlation": -0.6774523016554055
+    },
+    {
+      "feature": "load_roll_min_6",
+      "correlation": 0.6670050434548431
+    },
+    {
+      "feature": "load_roll_mean_6",
+      "correlation": 0.6423872012031202
+    }
+  ],
+  "target_derived_inputs": [],
+  "max_abs_autocorrelation": 0.9557219232745773,
+  "max_abs_non_target_lead_correlation": 0.86921482820129,
+  "issues": [],
+  "viability": "viable"
+}

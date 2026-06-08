@@ -1,0 +1,69 @@
+{
+  "proposed_metrics": {
+    "mse": 5685.568983315372,
+    "rmse": 75.40271204217639,
+    "mae": 55.486739596487915,
+    "mape": 1.6885240052232475
+  },
+  "proposed_config": {
+    "dataset_path": "dataset/GEFCom2014 Data",
+    "output_dir": "artifacts/lfshdlbwo_proposed",
+    "window_size": 48,
+    "forecast_horizon": 1,
+    "validation_split": 0.2,
+    "tune_split": 0.2,
+    "feature_mode": "gefcom_load",
+    "start_date": null,
+    "end_date": null,
+    "recent_years": 1,
+    "random_seed": 42,
+    "bwo_population_size": 3,
+    "bwo_max_iter": 2,
+    "candidate_epochs": 10,
+    "final_epoch_buffer": 2,
+    "early_stopping_patience": 3,
+    "min_delta": 0.0001,
+    "reduce_lr_patience": 3,
+    "bwo_patience": 0,
+    "epoch_log_interval": 1,
+    "save_model": true,
+    "verbose": 0,
+    "baseline_metrics_path": null
+  },
+  "dataset": {
+    "dataset_name": "GEFCom2014-E load",
+    "dataset_path": "dataset/GEFCom2014 Data/GEFCom2014-E_V2/GEFCom2014-E.xlsx",
+    "rows_before_missing_load_drop": 96432,
+    "missing_load_rows": 17544,
+    "known_load_rows": 78888,
+    "selected_rows": 8760,
+    "start_timestamp": "2014-01-01 00:00:00",
+    "end_timestamp": "2014-12-31 23:00:00",
+    "raw_series_count": 2,
+    "target_series_count": 1,
+    "exogenous_series_count": 1,
+    "target_series_names": [
+      "load"
+    ],
+    "exogenous_series_names": [
+      "temperature"
+    ],
+    "recent_years": 1,
+    "start_date": null,
+    "end_date": null
+  },
+  "proposed_rank_by_rmse": 4,
+  "models_compared": [
+    "cnn_lstm",
+    "gru",
+    "cnn_bilstm",
+    "Beluga ForecastNet",
+    "lstm",
+    "cblstm_ae",
+    "bilstm",
+    "arima",
+    "sarima"
+  ],
+  "seed_count": 1,
+  "robustness_status": "single_seed_current_artifacts"
+}

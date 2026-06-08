@@ -47,9 +47,9 @@ The checked-in artifacts use the compact MacBook-friendly GEFCom setup:
 
 Beluga ForecastNet beats the plain CBLSTM-AE by about **18.3% RMSE** and beats 5 of 8 baselines. On this compact run, CNN-LSTM is the strongest baseline, so the current honest claim is **competitive performance with a clear improvement over the paper architecture before BWO tuning**, not overall dominance.
 
-![RMSE comparison](docs/figures/rmse_comparison.png)
+![RMSE comparison](./docs/figures/rmse_comparison.png)
 
-![MAPE comparison](docs/figures/mape_comparison.png)
+![MAPE comparison](./docs/figures/mape_comparison.png)
 
 ## Beluga ForecastNet Model
 
@@ -57,7 +57,7 @@ Beluga ForecastNet keeps the CBLSTM-AE architecture paper-faithful and uses BWO 
 
 ### Architecture
 
-![Beluga ForecastNet architecture](docs/figures/beluga_forecastnet_architecture.png)
+![Beluga ForecastNet architecture](./docs/figures/beluga_forecastnet_architecture.png)
 
 The model architecture is:
 
@@ -84,7 +84,7 @@ BWO tunes:
 
 ### BWO Optimization Flow
 
-![BWO optimization flow](docs/figures/bwo_optimization_flow.png)
+![BWO optimization flow](./docs/figures/bwo_optimization_flow.png)
 
 Best checked-in BWO result:
 
@@ -97,11 +97,11 @@ learning_rate: 0.001
 batch_size: 32
 ```
 
-![BWO candidate search](docs/figures/bwo_candidate_rmse.png)
+![BWO candidate search](./docs/figures/bwo_candidate_rmse.png)
 
-![Training loss](docs/figures/proposed_training_loss.png)
+![Training loss](./docs/figures/proposed_training_loss.png)
 
-![Actual vs predicted](docs/figures/proposed_actual_vs_predicted.png)
+![Actual vs predicted](./docs/figures/proposed_actual_vs_predicted.png)
 
 ## Repository Structure
 
@@ -247,3 +247,9 @@ Tao Hong, Pierre Pinson, Shu Fan, Hamidreza Zareipour, Alberto Troccoli, and Rob
 python3 -m compileall -q src comparison_models scripts tests
 python3 -m unittest tests.smoke_test
 ```
+
+## License and Citation
+
+Code is released under the MIT License. See `LICENSE`.
+
+Citation metadata is provided in `CITATION.cff`; it also includes the GEFCom2014 dataset paper reference.

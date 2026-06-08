@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beluga-forecastnet"
+version = "0.1.0"
+description = "Beluga ForecastNet: short-term load forecasting with a BWO-tuned CBLSTM-AE."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "MIT"
+authors = [
+  { name = "Pratyush" },
+]
+dependencies = [
+  "numpy==2.1.3",
+  "pandas==2.2.3",
+  "scikit-learn==1.6.1",
+  "tensorflow==2.21.0",
+  "matplotlib==3.10.1",
+  "statsmodels==0.14.4",
+  "optuna==4.9.0",
+]
+
+[project.scripts]
+beluga-forecastnet = "lfs_hdlbwo.proposed_cli:main"
+lfs-hdlbwo-optuna-baselines = "comparison_models.optuna_cli:main"
+lfs-hdlbwo-proposed = "lfs_hdlbwo.proposed_cli:main"
+
+[project.urls]
+Homepage = "https://github.com/<your-username>/beluga-forecastnet"
+Repository = "https://github.com/<your-username>/beluga-forecastnet"
+Issues = "https://github.com/<your-username>/beluga-forecastnet/issues"
+
+[tool.setuptools]
+packages = ["lfs_hdlbwo", "comparison_models"]
+
+[tool.setuptools.package-dir]
+lfs_hdlbwo = "src/lfs_hdlbwo"
+comparison_models = "comparison_models"

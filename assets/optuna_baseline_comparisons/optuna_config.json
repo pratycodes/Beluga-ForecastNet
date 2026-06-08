@@ -1,0 +1,32 @@
+{
+  "dataset_path": "dataset/GEFCom2014 Data",
+  "output_dir": "artifacts/optuna_baseline_comparisons",
+  "seed": 42,
+  "n_trials": 5,
+  "statistical_trials": 4,
+  "max_epochs": 15,
+  "patience": 3,
+  "min_delta": 0.0001,
+  "reduce_lr_patience": 3,
+  "validation_split": 0.2,
+  "tune_split": 0.2,
+  "window_size": 48,
+  "forecast_horizon": 1,
+  "feature_mode": "gefcom_load",
+  "start_date": null,
+  "end_date": null,
+  "recent_years": 1,
+  "statistical_train_limit": 2000,
+  "save_models": false,
+  "verbose": 0,
+  "model_names": [
+    "arima",
+    "sarima",
+    "lstm",
+    "gru",
+    "bilstm",
+    "cnn_lstm",
+    "cnn_bilstm",
+    "cblstm_ae"
+  ]
+}

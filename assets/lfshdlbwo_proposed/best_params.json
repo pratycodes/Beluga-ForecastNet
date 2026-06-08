@@ -1,0 +1,8 @@
+{
+  "conv_filters": 96,
+  "bilstm_units": 128,
+  "decoder_units": 64,
+  "dense_units": 16,
+  "learning_rate": 0.001,
+  "batch_size": 32
+}
